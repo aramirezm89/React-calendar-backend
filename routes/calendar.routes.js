@@ -20,8 +20,8 @@ router.post('/',
     validarCampos
 ],createEvent);
 
-router.put('/',updateEvent);
+router.put('/:id',updateEvent);
 
-router.delete('/',deleteEvent);
+router.delete('/:id',deleteEvent);
 
 module.exports = router;
