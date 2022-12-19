@@ -24,7 +24,8 @@ app.use(cors())
 app.use(express.static('public'));
 //routes
 
-app.use('/api/auth',require('./routes/auth.routes'))
+app.use('/api/auth',require('./routes/auth.routes'));
+app.use('/api/calendar',require('./routes/calendar.routes'));
 
 //configuracion del puerto en el que trabajara el servidor
 app.listen(process.env.PORT,() =>{ console.log(`Servidor corriendo en el puerto ${process.env.PORT}`)} )
