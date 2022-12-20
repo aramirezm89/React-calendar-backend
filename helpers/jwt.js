@@ -1,7 +1,7 @@
 const jwt = require("jsonwebtoken");
 
-const generarJWT = (uid, nombre, email) => {
-  const payload = { uid, nombre, email }; // payload es la informacion que conendra el token en este caso id de usuario y nombre.
+const generarJWT = (uid, name, email) => {
+  const payload = { uid, name, email }; // payload es la informacion que conendra el token en este caso id de usuario y nombre.
 
   /*la funcion sign recibe como primer argumento el payload y como segundo argumento el secretKEy en este caso
     la secretKey se encuentra en el archiv .env (SECRET_JWT_SEED)

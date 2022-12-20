@@ -18,7 +18,7 @@ const validarJWT = (req, res, next) => {
     /*verifica que el token con la funcion verify() la cual me devuelve el payload del token en caso de pasar la verificacion
      */
 
-    const { uid, nombre, email } = jwt.verify(
+    const { uid, name, email } = jwt.verify(
       token,
       process.env.SECRET_JWT_SEED
     );
@@ -26,7 +26,7 @@ const validarJWT = (req, res, next) => {
     //pasar proiedades del payload del token a la request
 
     req.uid = uid;
-    req.nombre = nombre;
+    req.name = name;
     req.email = email;
 
     next();
