@@ -23,7 +23,7 @@ const login = async (req, res) => {
 
     if (!validPassword) {
       return res.status(400).json({
-        ok: true,
+        ok: false,
         message: "credenciales de usuario no validas",
       });
     }
@@ -86,6 +86,7 @@ const crearUsuario = async (req, res) => {
       usuario,
       token,
     });
+
   } catch (error) {
     console.log(error);
     res.status(500).json({
