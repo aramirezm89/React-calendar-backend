@@ -40,6 +40,7 @@ const login = async (req, res) => {
       ok: true,
       message: "Bienvenido",
       uid:usuarioDB.id,
+      name:usuarioDB.name,
       token,
     });
   } catch (error) {
